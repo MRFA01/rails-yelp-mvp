@@ -2,6 +2,7 @@
 <ul>
   <% @restaurants.each do |restaurant| %>
     <li><%= link_to restaurant.name, restaurant_path(restaurant.id) %></li>
-
   <% end %>
 </ul>
+
+<p><%= link_to "Add new", new_restaurant_path %></p>

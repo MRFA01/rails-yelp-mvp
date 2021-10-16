@@ -1,8 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a new restaurant</h1>
-      <%= simple_form_for @restaurant do |f| %>
+
+      <% if @restaurant.id %>
+        <h5>Edit please</h5>
+      <% else %>
+        <h1> Create a new restaurant</h1>
+      <% end %>
+        <%= simple_form_for @restaurant do |f| %>
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :phone_number %>
